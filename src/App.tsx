@@ -3,7 +3,7 @@ import { AppRouter } from "./router";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-    uri: "http://localhost:3000/graphql",
+    uri: import.meta.env.VITE_GRAPHQL_API_URL,
     cache: new InMemoryCache(),
 });
 
