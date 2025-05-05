@@ -12,3 +12,13 @@ export const GET_ACCOUNTS = gql`
         }
     }
 `;
+
+export const CREATE_ACCOUNT = gql`
+    mutation CreateAccount($name: String!, $email: String!) {
+        createAccount(name: $name, email: $email) {
+            _id
+            name
+            email
+        }
+    }
+`;

@@ -15,3 +15,13 @@ export const GET_PRODUCTS = gql`
         }
     }
 `;
+
+export const ADD_PRODUCTS = gql`
+    mutation AddProducts($accountId: ID!, $products: [ProductInput!]!) {
+        addProducts(accountId: $accountId, products: $products) {
+            _id
+            name
+            sku
+        }
+    }
+`;
