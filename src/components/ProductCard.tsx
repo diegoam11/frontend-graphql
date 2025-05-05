@@ -22,7 +22,7 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
             </h2>
             <p className="text-sm text-gray-500">SKU: {product.sku}</p>
             <div className="flex items-center justify-between text-sm text-gray-400">
-                <span>Cuenta ID: {product.account?.email}</span>
+                <span>Email: {product.account?.email}</span>
                 <span
                     className={`transform transition-transform ${
                         expanded ? "rotate-180" : ""
@@ -35,10 +35,10 @@ export const ProductCard: React.FC<Props> = ({ product }) => {
             {expanded && product.account && (
                 <div className="mt-2 text-sm text-gray-600 space-y-1">
                     <p>
-                        <strong>Nombre:</strong> {product.account._id}
+                        <strong>ID:</strong> {product.account._id}
                     </p>
                     <p>
-                        <strong>Email:</strong> {product.account.name}
+                        <strong>Name:</strong> {product.account.name}
                     </p>
                 </div>
             )}
