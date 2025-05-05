@@ -10,6 +10,8 @@ export const GET_PRODUCTS = gql`
                 name
                 account {
                     _id
+                    name
+                    email
                 }
             }
         }
